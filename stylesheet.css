@@ -15,12 +15,17 @@ a {
   text-decoration: none;
 }
 
+
+/*header*/
 header {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
-  padding: 1.1rem 4%;
+  position: fixed;
+  z-index: 100;
+  padding: 1.1em 4%;
 }
 .global_navi,.gnav_mainmenu{
   display: flex;
@@ -30,23 +35,80 @@ header {
 }
 
 .header_logo img {
-  width: 8rem;
+  width: 8em;
   height: auto;
 }
 .letters {
-  font-size: 0.75rem;
+  font-size: 0.75em;
   font-weight: 400;
   color: #000639;
   font-family: 'Libre Baskerville', serif;
-  margin-left: 2rem;
+  margin-left: 2.3em;
 }
 .head_sns img {
-  width: 1rem;
-  height: 1rem;
+  width: 1em;
+  height: 1em;
   height: auto;
   align-items: center;
-  padding-top: 0.5rem;
+  padding-top: 0.5em;
 }
 .facebook_icon {
-  margin-right: 1rem;
+  margin-right: 1em;
+}
+
+
+/*main*/
+.main_contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.main_visual {
+  width: 50%;
+  height: auto;
+  right: 0%;
+  margin-top: -6rem;
+  height: 800px;
+  overflow: hidden;
+  position: relative;
+}
+.main_img img{
+  height: 800px;
+  object-fit: cover;
+  overflow: hidden;
+  position: relative;
+}
+.main_text {
+  margin-left: 6%;
+  line-height: 2em;
+  width: auto;
+  word-wrap: break-word;
+}
+.main_txt_lead {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 1em;
+  line-height: 2em;
+}
+
+.txt_libre {
+  font-family: 'Libre Baskerville', serif;
+  letter-spacing: 0.06em;
+}
+
+.main_cloud img{
+  position: absolute;
+  top: 600px;
+  right: 0%;
+  width: 60%;
+  object-fit: cover;
+}
+
+.main_copy {
+  z-index: 100;
+  display: flex;
+  width: 17rem;
+  position: absolute;
+  top: 20%;
+  right: 45.5%;
 }
