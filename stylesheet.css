@@ -189,7 +189,7 @@ header {
     width: 0.4em;
     height: 0.4em;
     transform: translateY(-2px) rotate(45deg);
-    margin: 0 0.5em;
+    margin-right: 0.5em;
     transition: all .3s;
   }
 
