@@ -453,83 +453,93 @@ margin-top: 100px;
 
 
 
-
-
-/*レスポンシブ*/
+/*レスポンシブ --------------------------------------------------------- */
 @media screen and (max-width: 1200px) {
   .pc_br {
     display: none;
   }
+
   .main_text {
     word-wrap: break-word;
     width: 38%;
   }
+
   .main_cloud img {
     top: 630px;
   }
+
   .concept_cloud img {
     top: 1530px;
   }
+
   .concept_text {
     margin-right: 40px;
     width: 40%;
   }
 }
 
-
+/*タブレット*/
 @media screen and (max-width: 900px) {
   .header_logo img {
     width: 6.7em;
   }
+
   .main_contents {
     flex-direction: column-reverse;
     padding-bottom: 0px;
   }
+
   .main_visual {
     width: 95%;
     margin-top: 120px;
   }
+
   .main_img img {
     height: 650px;
   }
+
   .main_cloud img {
     width: 100%;
     top: 630px;
   }
+
   .main_copy {
     right: 41.5%;
     top: 15%;
   }
+
   .main_text {
     width: 100%;
     padding: 0 3em;
     margin-top: -130px;
-    }
-
+  }
 
   .concept_contents {
     flex-direction: column;
     padding-bottom: 70px;
   }
+
   .concept_img img {
     height: 480px;
     width: 100%;
   }
+
   .concept_visual {
     width: 95%;
     height: auto;
   }
+
   .concept_cloud img {
     width: 100%;
     top: 1440px;
   }
+
   .concept_text {
     width: 100%;
     padding: 0 3em;
     margin-left: 0px;
   }
 
-  
   .lineup_contents {
       overflow-x: scroll;
       width: 100%;
@@ -559,6 +569,143 @@ margin-top: 100px;
   .topics_btn_wrap {
     left: 80%;
   }
+
+  .topics_cloud img {
+    width: 100%;
+    top: 2750px;
+  }
+
+  .tel_list {
+    font-size: 1.3em;
+    padding: 0.8em;
+    width: 250px;
+    border: 1px solid #000639;
+    border-radius: 2em;
+  }
+
+  .contact_cloud img {
+    width: 100%;
+    top: 3350px;
+  }
+
+  .contact_btn_wrap {
+    padding: 1em 2em;
+    margin: 0;
+  }
+
+  .contact_message,.contact_heading {
+      width: 100%;
+  }
+
+  .contact_message {
+    margin-bottom: 20px;
+  }
+
+  .contact_contents {
+    display: flex;
+    flex-wrap: wrap;  
+    justify-content: center;
+    padding-bottom: 0;
+  }
+
+  footer {
+    margin-top: 0;
+  }
+}
+
+
+
+
+
+
+/*スマートフォン*/
+@media screen and (max-width: 414px) {
+
+/*header*/
+  .global_navi, .gnav_mainmenu {
+    display: none;
+}
+
+.concept_heading, .lineup_heading, .topics_heading, .contact_heading {
+  font-size: 1.5em;
+}
+
+.main_copy {
+  width: 40%;
+  right: 45%;
+  top: 4.5%;
+}
+
+.main_img img{
+  height: auto;
+  width: 100%;
+}
+
+.main_visual {
+  margin-top: 80px;
+  height: auto;
+}
+
+.main_text,.concept_text {
+  margin-top: 0px;
+  padding: 1.5em;
+}
+
+.main_cloud img {
+  top: 300px;
+}
+
+.concept_visual {
+  margin-top: -80px;
+}
+
+.concept_img img{
+  height: 280px;
+  width: 100%;
+}
+
+.concept_cloud img {
+  top: 950px;
+  width: 100%;
+}
+
+.topics_contents {
+  padding-bottom: 220px;
+}
+
+.topics_news {
+  width: 95%;
+  padding-left: 1rem;
+}
+
+.topics_news > dd {
+  padding: 5px 0px;
+}
+
+.news_cat {
+  padding: 0.1rem 0.8rem;
+}
+
+.topics_btn_wrap {
+  left: 70%;
+  margin-top: 30px;
+}
+
+.topics_cloud img {
+  top: 2350px;
+}
+
+.contact_contents {
+  padding-bottom: 60px;
+}
+
+.contact_cloud img {
+  top: 2950px;
+}
+
+.tel_list {
+  margin-bottom: 20px;
+}
 
 
 }
