@@ -19,11 +19,17 @@
           <img src="/images/logo.png" alt="logo">
         </a>
       </div>
-      <nav id="globalnav" class="global_navi">
+      <div class="openbtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div><!-- openbtn -->
+    
+      <nav id="globalnav" class="global_navi gnav-sp">
         <ul class="gnav_mainmenu">
           <li data-page="concept">
             <a href="#">
-              <span class="letters">
+              <span class="letters wave" style="transition: 2s;">
                 <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">C</span>
                 <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">o</span>
                 <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">n</span>
@@ -36,7 +42,7 @@
           </li><!--concept-->
           <li data-page="lineup">
             <a href="#">
-              <span class="letters">
+              <span class="letters wave">
                 <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">L</span>
                 <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">i</span>
                 <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">n</span>
@@ -49,7 +55,7 @@
           </li><!--lineup-->
           <li data-page="works">
             <a href="#">
-              <span class="letters">
+              <span class="letters wave">
                 <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">W</span>
                 <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">o</span>
                 <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">r</span>
@@ -60,7 +66,7 @@
           </li><!--works-->
           <li data-page="company">
             <a href="#">
-              <span class="letters">
+              <span class="letters wave">
                 <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">C</span>
                 <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">o</span>
                 <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">m</span>
@@ -73,7 +79,7 @@
           </li><!--company-->
           <li data-page="topics">
             <a href="#">
-              <span class="letters">
+              <span class="letters wave">
                 <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">T</span>
                 <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">o</span>
                 <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">p</span>
@@ -85,7 +91,7 @@
           </li><!--topics-->
           <li data-page="contact">
             <a href="#">
-              <span class="letters">
+              <span class="letters wave">
                 <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">C</span>
                 <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">o</span>
                 <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">n</span>
@@ -96,22 +102,19 @@
               </span>
             </a>
           </li><!--contact-->
-        </ul><!--gnav_mainmenu-->
-
-        <div class="gnav_submenu">
-          <ul class="head_sns">
+          <nav class="gnav-submenu">
             <li class="facebook_icon">
               <a href="#">
-                <img src="/images/facebook.svg" alt="facebook_icon">
+                <img src="../Comfy-demo/images/facebook.svg" alt="facebook_icon">
               </a>
             </li>
             <li class="instagram_icon">
               <a href="#">
-                <img src="/images/instagram.svg" alt="instagram_icon">
+                <img src="../Comfy-demo/images/instagram.svg" alt="instagram_icon">
               </a>
             </li>
-          </ul><!--head_sns-->
-        </div><!--gnav_submenu-->
+          </nav>
+        </ul><!--gnav_mainmenu-->
       </nav><!--global_navi-->
     </header>
 
@@ -415,6 +418,8 @@
       </footer>
 
   </div><!--wrapper-->
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
 
 </body>
 </html>
