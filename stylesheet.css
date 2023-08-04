@@ -460,9 +460,7 @@ margin-top: 100px;
     opacity: 0.5;
   }
 }
-date-page .concept{
-  transform-style: preserve-3d;
-}
+
 .wave {
   display: block;
 }
@@ -483,14 +481,24 @@ date-page .concept{
 }
 
 .wave:hover span:nth-child(3) {
-  animation-delay: .06s;
+  animation-delay: .025s;
 }
 
 .wave:hover span:nth-child(4) {
-  animation-delay: .12s;
+  animation-delay: .04s;
 }
 
+.wave:hover span:nth-child(5) {
+  animation-delay: .055s;
+}
 
+.wave:hover span:nth-child(6) {
+  animation-delay: .07s;
+}
+
+.wave:hover span:nth-child(7) {
+  animation-delay: .085s;
+}
 
 
 
