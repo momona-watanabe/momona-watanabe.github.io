@@ -47,8 +47,9 @@ header {
 .global_navi,.gnav_mainmenu{
   display: flex;
 }
-.head_sns {
+.gnav-submenu {
   display: flex;
+  margin-left: 3em;
 }
 
 .header_logo img {
@@ -62,7 +63,7 @@ header {
   font-family: 'Libre Baskerville', serif;
   margin-left: 2.3em;
 }
-.head_sns img {
+.gnav-submenu img {
   width: 1em;
   height: 1em;
   height: auto;
@@ -196,38 +197,38 @@ header {
   overflow: hidden;
   position: relative;
 }
-  .concept_img img{
-    height: 750px;
-    object-fit: cover;
-    overflow: hidden;
-    position: relative;
-  }
+.concept_img img{
+  height: 750px;
+  object-fit: cover;
+  overflow: hidden;
+  position: relative;
+}
 
-  .concept_cloud img{
-    position: absolute;
-    top: 1500px;
-    left: 0%;
-    width: 60%;
-    object-fit: cover;
-  }
+.concept_cloud img{
+  position: absolute;
+  top: 1500px;
+  left: 0%;
+  width: 60%;
+  object-fit: cover;
+}
 
 
-  .concept_text {
-    margin-right: 13%;
-    margin-left: 40px;
-    line-height: 2em;
-    width: auto;
-    word-wrap: break-word;
-    z-index: 300;
-  }
+.concept_text {
+  margin-right: 13%;
+  margin-left: 40px;
+  line-height: 2em;
+  width: auto;
+  word-wrap: break-word;
+  z-index: 300;
+}
 
-  .concept_text p {
-    margin-bottom: 1.5em;
-  }
+.concept_text p {
+  margin-bottom: 1.5em;
+}
 
-  .textL {
-    font-size: 1.3em;
-  }
+.textL {
+  font-size: 1.3em;
+}
 
 
 
@@ -432,7 +433,6 @@ figcaption {
     width: 250px;
     margin: 0 auto;
     border-radius: 2rem;
-    line-height: 120%;
 }
 
 
@@ -447,6 +447,60 @@ margin-top: 100px;
 .copyright {
   letter-spacing: 1px;
 }
+
+
+
+/*header テキストウェーブ*/
+@keyframes wave {
+  100% {
+    transform: translate3d(1px, -5px, 0.3em);
+    opacity: 1;
+  }
+  50% {transform: translate3d(0.5px, 1px, 0.1em);
+    opacity: 0.5;
+  }
+}
+date-page .concept{
+  transform-style: preserve-3d;
+}
+.wave {
+  display: block;
+}
+
+.wave span {
+  display: inline-block;
+}
+
+.wave:hover span {
+  animation-name: wave;
+  animation-duration: .16s;
+  animation-direction: alternate;
+  animation-iteration-count: 1.6;
+}
+
+.wave:hover span:nth-child(2) {
+  animation-delay: .01s;
+}
+
+.wave:hover span:nth-child(3) {
+  animation-delay: .06s;
+}
+
+.wave:hover span:nth-child(4) {
+  animation-delay: .12s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -478,11 +532,116 @@ margin-top: 100px;
   }
 }
 
-/*タブレット*/
+
 @media screen and (max-width: 900px) {
+
+  /*header*/
+
+  header {
+    padding: 1.4em 4%;
+  }
+  
   .header_logo img {
     width: 6.7em;
   }
+  .global_navi, .gnav_mainmenu {
+    display: inline-block;
+  }
+  .letters {
+    font-size: 1em;
+    height: 60px;
+    display: block;
+  }
+
+  .gnav-submenu {
+    display: block;
+  }
+  .gnav-submenu img {
+    width: 1.5em;
+    height: auto;
+    padding-top: 1.5em;
+    display: inline-block;
+  }
+
+  .facebook_icon {
+    margin-right: 0;
+  }
+    .gnav-mainmenu > li > a {
+      width: 100%;
+      padding: 0.2em 0;
+      display: block;
+  }
+
+  
+  /*ボタンのCSS*/
+  .openbtn{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 9999;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+  }
+  /* ×に変化 */
+  .openbtn span {
+    display: inline-block;
+    transition: all .2s;
+    position: absolute;
+    left: 14px;
+    height: 1px;
+    background-color: #000639;
+    width: 45%;
+  }
+  .openbtn span:nth-of-type(1) {
+    top:15px;
+  }
+  .openbtn span:nth-of-type(2) {
+    top:23px;
+  }
+  .openbtn span:nth-of-type(3) {
+    top:31px;
+  }
+
+  .openbtn.active span:nth-of-type(1) {
+    top:18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+  }
+  .openbtn.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+  .openbtn.active span:nth-of-type(3) {
+    top:30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+  }
+
+  /*ナビゲーション*/
+  .gnav-sp ul {
+    position: absolute;
+    z-index: 999;
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    width: 100%;
+  }
+
+  .gnav-sp{
+    position: fixed;
+    z-index: 999;
+    top:0;
+    right: -120%;
+    width: 50%;
+    height: 100vh;
+    background-color: #FFF;
+    transition: all 0.6s;
+  }
+  .gnav-sp.panelactive{
+    right: 0;
+  }
+
 
   .main_contents {
     flex-direction: column-reverse;
@@ -611,101 +770,120 @@ margin-top: 100px;
   footer {
     margin-top: 0;
   }
-}
+}/*タブレット*/
 
 
 
 
 
 
-/*スマートフォン*/
-@media screen and (max-width: 414px) {
 
-/*header*/
-  .global_navi, .gnav_mainmenu {
-    display: none;
-}
+  @media screen and (max-width: 414px) {
 
-.concept_heading, .lineup_heading, .topics_heading, .contact_heading {
-  font-size: 1.5em;
-}
+  .header_logo img {
+    width: 6em;
+  }
+  .letters {
+    margin-left: auto;
+  }
+  .gnav-submenu {
+    margin-left: 0; 
+  }
 
-.main_copy {
-  width: 40%;
-  right: 45%;
-  top: 4.5%;
-}
-
-.main_img img{
-  height: auto;
-  width: 100%;
-}
-
-.main_visual {
-  margin-top: 80px;
-  height: auto;
-}
-
-.main_text,.concept_text {
-  margin-top: 0px;
-  padding: 1.5em;
-}
-
-.main_cloud img {
-  top: 300px;
-}
-
-.concept_visual {
-  margin-top: -80px;
-}
-
-.concept_img img{
-  height: 280px;
-  width: 100%;
-}
-
-.concept_cloud img {
-  top: 950px;
-  width: 100%;
-}
-
-.topics_contents {
-  padding-bottom: 220px;
-}
-
-.topics_news {
-  width: 95%;
-  padding-left: 1rem;
-}
-
-.topics_news > dd {
-  padding: 5px 0px;
-}
-
-.news_cat {
-  padding: 0.1rem 0.8rem;
-}
-
-.topics_btn_wrap {
-  left: 70%;
-  margin-top: 30px;
-}
-
-.topics_cloud img {
-  top: 2350px;
-}
-
-.contact_contents {
-  padding-bottom: 60px;
-}
-
-.contact_cloud img {
-  top: 2950px;
-}
-
-.tel_list {
-  margin-bottom: 20px;
-}
+  .openbtn {
+    top: 0px;
+  }
+  .openbtn span {
+    left: 20px;
+  }
 
 
-}
+  .concept_heading, .lineup_heading, .topics_heading, .contact_heading {
+    font-size: 1.5em;
+  }
+
+  .main_copy {
+    width: 40%;
+    right: 45%;
+    top: 5%;
+  }
+
+  .main_img img{
+    height: auto;
+    width: 100%;
+  }
+
+  .main_visual {
+    margin-top: 80px;
+    height: auto;
+  }
+
+  .main_text,.concept_text {
+    margin-top: 0px;
+    padding: 1.5em;
+  }
+
+  .main_cloud img {
+    top: 300px;
+  }
+
+  .concept_visual {
+    margin-top: -80px;
+  }
+
+  .concept_img img{
+    height: 280px;
+    width: 100%;
+  }
+
+  .concept_cloud img {
+    top: 950px;
+    width: 100%;
+  }
+
+  .topics_contents {
+    padding-bottom: 220px;
+  }
+
+  .topics_news {
+    width: 95%;
+    padding-left: 1rem;
+  }
+
+  .topics_news > dd {
+    padding: 5px 0px;
+  }
+
+  .news_cat {
+    padding: 0.1rem 0.8rem;
+  }
+
+  .topics_btn_wrap {
+    left: 70%;
+    margin-top: 30px;
+  }
+
+  .topics_cloud img {
+    top: 2350px;
+  }
+
+  figcaption {
+    font-size: 1.2em;
+    padding: 30px;
+  }
+
+  .contact_contents {
+    padding-bottom: 60px;
+  }
+
+  .contact_cloud img {
+    top: 2950px;
+  }
+
+  .tel_list {
+    margin-bottom: 20px;
+  }
+
+
+
+}/*スマートフォン*/
