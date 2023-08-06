@@ -11,6 +11,10 @@
 </head>
 <body>
 
+  <!---画面遷移用-->
+  <div id="splash"></div>
+  <div class="splashbg"></div>
+
   <div class="wrapper">
     <!--header-->
     <header id="header" class="header_wrapper">
@@ -29,7 +33,7 @@
         <ul class="gnav_mainmenu">
           <li data-page="concept">
             <a href="#">
-              <span class="letters wave" style="transition: 2s;">
+              <span class="letters wave">
                 <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">C</span>
                 <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">o</span>
                 <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">n</span>
@@ -118,13 +122,13 @@
       </nav><!--global_navi-->
     </header>
 
-    <main class="main_wrapper">
+    <main class="main_wrapper fadeIn">
       <div class="main_copy_wrap">
-        <h1 class="main_copy">
+        <h1 class="main_copy copy_fadein">
           <span class="letter main_copy_letter" style="opacity: 1; transform: translateX(-32px) translateY(80px);"><img src="/images/main_copy1.png" alt="空"></span>
           <span class="letter main_copy_letter" style="opacity: 1; transform: translateX(12px) translateY(100px);"><img src="/images/main_copy2.png" alt="気"></span>
           <span class="letter main_copy_letter" style="opacity: 1; transform: translateX(48px) translateY(70px);"><img src="/images/main_copy3.png" alt="と"></span>
-          <span class="letter main_copy_letter" style="opacity: 1; transform: translateX(88px) translateY(45px)"><img src="/images/main_copy4.png" alt="暮"></span>
+          <span class="letter main_copy_letter" style="opacity: 1; transform: translateX(88px) translateY(45px);"><img src="/images/main_copy4.png" alt="暮"></span>
           <span class="letter main_copy_letter" style="opacity: 1; transform: translateX(128px) translateY(60px);"><img src="/images/main_copy5.png" alt="ら"></span>
           <span class="letter main_copy_letter" style="opacity: 1; transform: translateX(158px) translateY(15px);"><img src="/images/main_copy6.png" alt="す"></span>
           <span class="letter main_copy_letter" style="opacity: 1; transform: translateX(168px) translateY(20px);"><img src="/images/main_copy7.png" alt="。"></span>
@@ -134,7 +138,8 @@
         <div class="main_text">
           <p class="main_txt_lead">
             <span class="txt_libre">COMFY</span>は、
-            <br class="pc_br">長野県安曇野の自然豊かな立地に拠点を置く<br class="pc_br">アトリエ系地域ビルダーです。
+            <br class="pc_br">
+            長野県安曇野の自然豊かな立地に拠点を置く<br class="pc_br">アトリエ系地域ビルダーです。
           </p>
           <p>
             わたしたちは、安曇野や白馬で暮らす人が
@@ -157,13 +162,15 @@
       </div>
     </main>
 
-    <div class="concept_wrapper">
+
+    <div class="concept_wrapper fadeUpTrigger">
       <div class="concept_contents concept" style="opacity: 1;">
         <div class="concept_visual">
           <div class="concept_img">
             <img src="/images/concept-image_.jpg" alt="concept_image">
           </div>
         </div>
+
         <div class="concept_text">
           <h2 class="concept_heading txt_libre">Concept</h2>
           <p class="textL">逸品生産ー。</p>
@@ -201,14 +208,15 @@
       </div>
     </div><!--concept_wrapper-->
 
-    <article class="lineup_wrapper">
+
+    <article class="lineup_wrapper fadeUpTrigger">
       <h2 class="lineup_heading txt_libre">Line up</h2>
       <div class="lineup_contents lineup">
         <ol class="lineup_list">
           <li class="inviewContents inview">
             <p class="lineup_num">01</p>
             <a href="#" class="hover">
-              <figure class="conts_img inviewContents inview">
+              <figure class="conts_img inviewContents inview fadeUpTrigger">
                 <img src="/images/lineup-1mono.jpg" alt="" class="mono">
                 <img src="/images/lineup-1.jpg" alt="" class="color">
                 <figcaption>COMFY HOUSE</figcaption>
@@ -224,7 +232,7 @@
           <li class="inviewContents inview">
             <p class="lineup_num">02</p>
             <a href="#" class="hover">
-              <figure class="conts_img inviewContents inview">
+              <figure class="conts_img inviewContents inview fadeUpTrigger">
                 <img src="/images/lineup-2mono.jpg" alt="" class="mono">
                 <img src="/images/lineup-2.jpg" alt="" class="color">
                 <figcaption>HIKARI NO IE</figcaption>
@@ -240,7 +248,7 @@
           <li class="inviewContents inview">
             <p class="lineup_num">03</p>
             <a href="#" class="hover">
-              <figure class="conts_img inviewContents inview">
+              <figure class="conts_img inviewContents inview fadeUpTrigger">
                 <img src="/images/lineup-3mono.jpg" alt="" class="mono">
                 <img src="/images/lineup-3.jpg" alt="" class="color">
                 <figcaption> MODAN HOUSE</figcaption>
@@ -256,7 +264,7 @@
           <li class="inviewContents inview">
             <p class="lineup_num">04</p>
             <a href="#" class="hover">
-              <figure class="conts_img inviewContents inview">
+              <figure class="conts_img inviewContents inview fadeUpTrigger">
                 <img src="/images/lineup-4mono.jpg" alt="" class="mono">
                 <img src="/images/lineup-4.jpg" alt="" class="color">
                 <figcaption>HOSIZORA NO IE</figcaption>
@@ -272,7 +280,7 @@
           <li class="inviewContents inview">
             <p class="lineup_num">05</p>
             <a href="#" class="hover">
-              <figure class="conts_img inviewContents inview">
+              <figure class="conts_img inviewContents inview fadeUpTrigger">
                 <img src="/images/lineup-5mono.jpg" alt="" class="mono">
                 <img src="/images/lineup-5.jpg" alt="" class="color">
                 <figcaption>COTTAGE</figcaption>
@@ -288,7 +296,7 @@
           <li class="inviewContents inview">
             <p class="lineup_num">06</p>
             <a href="#" class="hover">
-              <figure class="conts_img inviewContents inview">
+              <figure class="conts_img inviewContents inview fadeUpTrigger">
                 <img src="/images/lineup-6mono.jpg" alt="" class="mono">
                 <img src="/images/lineup-6.jpg" alt="" class="color">
                 <figcaption>KUUKI NO IE</figcaption>
@@ -304,7 +312,7 @@
           <li class="inviewContents inview">
             <p class="lineup_num">07</p>
             <a href="#" class="hover">
-              <figure class="conts_img inviewContents inview">
+              <figure class="conts_img inviewContents inview fadeUpTrigger">
                 <img src="/images/lineup-7mono.jpg" alt="" class="mono">
                 <img src="/images/lineup-7.jpg" alt="" class="color">
                 <figcaption>RENOVATION</figcaption>
@@ -320,7 +328,7 @@
           <li class="inviewContents inview">
             <p class="lineup_num">08</p>
             <a href="#" class="hover">
-              <figure class="conts_img inviewContents inview">
+              <figure class="conts_img inviewContents inview fadeUpTrigger">
                 <img src="/images/lineup-8mono.jpg" alt="" class="mono">
                 <img src="/images/lineup-8.jpg" alt="" class="color">
                 <figcaption>KOMINKA SAISEI</figcaption>
@@ -336,7 +344,7 @@
           <li class="inviewContents inview">
             <p class="lineup_num">09</p>
             <a href="#" class="hover">
-              <figure class="conts_img inviewContents inview">
+              <figure class="conts_img inviewContents inview fadeUpTrigger">
                 <img src="/images/lineup-9mono.jpg" alt="" class="mono">
                 <img src="/images/lineup-9.jpg" alt="" class="color">
                 <figcaption>APARTMENT</figcaption>
@@ -353,14 +361,16 @@
       </div><!--lineup_contents-->
     </article><!--lineup_wrapper-->
 
-    <article class="topics_wrapper">
+
+    <article class="topics_wrapper ">
       <div class="topics_cloud">
         <img src="/images/nami-2.png" alt="">
       </div>
-      <div class="topics_contents">
+      <div class="topics_contents fadeUpTrigger">
         <div class="lay_column1">
-          <h2 class="topics_heading txt_libre inviewContents inview">Topics</h2>
+          <h2 class="topics_heading txt_libre inviewContents inview fadeUpTrigger">Topics</h2>
           <dl class="topics_news inviewContents inview">
+
             <dt>2023/07/05</dt>
             <dd>
               <span class="news_cat">施工実績</span>
@@ -390,12 +400,13 @@
         </div><!--lay_column1-->
       </div><!--topics_contents-->
     </article><!--topics_wrapper-->
-    
+
+
     <article class="contact_wrapper">
       <div class="contact_cloud">
         <img src="/images/nami-1.png" alt="">
       </div>
-      <div class="contact_contents">
+      <div class="contact_contents fadeUpTrigger">
         <h2 class="contact_heading txt_libre inviewContents inview">Contact</h2>
         <p class="contact_message">COMFYへのお問い合わせはお気軽にどうぞ</p>
         <dl class="tel_list txt_libre">
@@ -411,11 +422,14 @@
           <a href="#" class="contact_btn">お問い合わせフォーム</a>
         </div>
       </div><!--contact_contents-->
+
     </article><!--contact_wrapper-->
 
       <footer>
         <p class="copyright txt_libre">2023 COMFY.inc demosite</p>
       </footer>
+
+
 
   </div><!--wrapper-->
   <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
