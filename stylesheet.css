@@ -41,7 +41,7 @@ header {
   flex-wrap: wrap;
   align-items: center;
   position: fixed;
-  z-index: 500;
+  z-index: 999999;
   padding: 1.1em 4%;
 }
 .global_navi,.gnav_mainmenu{
@@ -183,6 +183,7 @@ header {
 .concept_wrapper {
   margin-top: 100px;
 }
+
 .concept_contents {
   display: flex;
   justify-content: space-between;
@@ -206,12 +207,11 @@ header {
 
 .concept_cloud img{
   position: absolute;
-  top: 1500px;
+  bottom: 100px;
   left: 0%;
   width: 60%;
   object-fit: cover;
 }
-
 
 .concept_text {
   margin-right: 13%;
@@ -229,7 +229,6 @@ header {
 .textL {
   font-size: 1.3em;
 }
-
 
 
 
@@ -321,11 +320,10 @@ figcaption {
 /*topics*/
 .topics_cloud img{
   position: absolute;
-  top: 3800px;
   right: 0%;
   width: 60%;
   object-fit: cover;
-  z-index: 200;
+  z-index: -1;
 }
 
 .topics_contents,.contact_contents {
@@ -386,15 +384,14 @@ figcaption {
 
 
 
-
 /*contact*/
 .contact_cloud img{
   position: absolute;
-  top: 4300px;
   left: 0%;
+
   width: 60%;
   object-fit: cover;
-  z-index: 200;
+  z-index: -1;
 }
 
 .contact_contents {
@@ -435,7 +432,6 @@ figcaption {
     border-radius: 2rem;
 }
 
-
 /*footer*/
 footer {
 padding: 3rem 0;
@@ -450,6 +446,13 @@ margin-top: 100px;
 
 
 
+
+
+
+/* アニメーション 
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------ */
+
 /*header テキストウェーブ*/
 @keyframes wave {
   100% {
@@ -457,10 +460,15 @@ margin-top: 100px;
     opacity: 1;
   }
   50% {transform: translate3d(0.5px, 1px, 0.1em);
-    opacity: 0.5;
+    opacity: 0.6;
+  }
+  25% {transform: translate3d(0.2px, 0.4px, 0em);
+    opacity: 0.8
   }
 }
-
+date-page .concept{
+  transform-style: preserve-3d;
+}
 .wave {
   display: block;
 }
@@ -474,6 +482,7 @@ margin-top: 100px;
   animation-duration: .16s;
   animation-direction: alternate;
   animation-iteration-count: 1.6;
+  animation-timing-function:ease-out;
 }
 
 .wave:hover span:nth-child(2) {
@@ -505,17 +514,189 @@ margin-top: 100px;
 
 
 
+/*loading*/
+/*画面遷移アニメーション*/
+
+#splash {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 9999999;
+  text-align:center;
+  color:#fff;
+}
+
+
+body.appear .splashbg{
+  content: "";
+  position:fixed;
+z-index: 999;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+left: 0;
+  transform: scaleY(0);
+  background-color: #D5E7F5;
+animation-name:PageAnime;
+animation-duration:1.5s;
+animation-timing-function:ease-out;
+animation-fill-mode:forwards;
+}
+
+@keyframes PageAnime{
+  0% {
+    transform-origin:top;
+    transform:scaleY(0);
+  }
+  50% {
+    transform-origin:top;
+    transform:scaleY(1);
+  }
+  50.001% {
+    transform-origin:bottom;
+  }
+  100% {
+    transform-origin:bottom;
+    transform:scaleY(0);
+  }
+}
+
+/*画面遷移の後現れるコンテンツ設定*/
+.wrapper{
+  opacity: 0;
+}
+
+
+body.appear .wrapper{
+  animation-name:PageAnimeAppear;
+  animation-duration:1s;
+  animation-delay: 1s;
+  animation-fill-mode:forwards;
+  opacity: 0;
+}
+
+@keyframes PageAnimeAppear{
+  0% {
+  opacity: 0;
+  }
+  100% {
+  opacity: 1;
+}
+}
+
+
+
+
+
+/*main FadeIn*/
+.fadeIn{
+  animation-name:fadeInAnime;
+  animation-duration:7s;
+  animation-fill-mode:forwards;
+  opacity:0;
+  }
+  
+  @keyframes fadeInAnime{
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+
+
+
+
+
+/*lineup FadeUp*/
+  .fadeUp{
+    animation-name:fadeUpAnime;
+    animation-duration:0.8s;
+    animation-fill-mode:forwards;
+    opacity:0;
+    }
+    
+    @keyframes fadeUpAnime{
+      from {
+        opacity: 0;
+      transform: translateY(100px);
+      }
+    
+      to {
+        opacity: 1;
+      transform: translateY(0);
+      }
+    }
+    
+    .fadeUpTrigger{
+        opacity: 0;
+    }
+    
+
+
+
+
+
+/*ホバー画像切り替え*/
+
+    .color{
+      display: block;
+      visibility:hidden;
+      position:absolute;
+      top:0;
+      left:0;
+      transition: 1s;
+      opacity: 0;
+    }
+    
+    
+    .conts_img:hover .mono{
+      visibility:hidden;
+      transition: all 1s;
+      opacity: 0;
+    }
+    
+    .conts_img:hover .color{
+      visibility:visible;
+      transition: all 1s;
+      opacity: 1;
+    }
+
+
+
+
+
+/*copy FadeIn*/
+
+  .copy_fadein{
+  animation-name:CopyAnime;
+  animation-duration:4s;
+  animation-fill-mode:forwards;
+  opacity:0;
+  }
+  
+  @keyframes CopyAnime{
+    0% {
+      opacity: 0;
+      transform: translateX(500px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
 
 
 
 
 
 
-
-
-
-
-/*レスポンシブ --------------------------------------------------------- */
+/* レスポンシブ 
+----------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------- */
 @media screen and (max-width: 1200px) {
   .pc_br {
     display: none;
@@ -528,10 +709,6 @@ margin-top: 100px;
 
   .main_cloud img {
     top: 630px;
-  }
-
-  .concept_cloud img {
-    top: 1530px;
   }
 
   .concept_text {
@@ -698,7 +875,7 @@ margin-top: 100px;
 
   .concept_cloud img {
     width: 100%;
-    top: 1440px;
+    top: 380px;
   }
 
   .concept_text {
@@ -752,7 +929,6 @@ margin-top: 100px;
 
   .contact_cloud img {
     width: 100%;
-    top: 3350px;
   }
 
   .contact_btn_wrap {
@@ -845,7 +1021,7 @@ margin-top: 100px;
   }
 
   .concept_cloud img {
-    top: 950px;
+    top: 150px;
     width: 100%;
   }
 
@@ -882,10 +1058,6 @@ margin-top: 100px;
 
   .contact_contents {
     padding-bottom: 60px;
-  }
-
-  .contact_cloud img {
-    top: 2950px;
   }
 
   .tel_list {
