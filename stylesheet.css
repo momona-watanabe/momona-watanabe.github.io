@@ -344,7 +344,7 @@ figcaption {
   z-index: 300;
   position: relative;
   align-items: center;
-  height: 190px;
+  line-height: 3rem;
 }
 
 .topics_news a {
@@ -527,7 +527,9 @@ date-page .concept{
   color:#fff;
 }
 
+/*========= 画面遷移のためのCSS ===============*/
 
+/*bodyにappearクラスがついたら出現*/
 body.appear .splashbg{
   content: "";
   position:fixed;
@@ -537,7 +539,7 @@ z-index: 999;
   top: 0;
 left: 0;
   transform: scaleY(0);
-  background-color: #D5E7F5;
+  background-color: #D5E7F5;/*伸びる背景色の設定*/
 animation-name:PageAnime;
 animation-duration:1.5s;
 animation-timing-function:ease-out;
@@ -564,10 +566,10 @@ animation-fill-mode:forwards;
 
 /*画面遷移の後現れるコンテンツ設定*/
 .wrapper{
-  opacity: 0;
+  opacity: 0;/*はじめは透過0に*/
 }
 
-
+/*bodyにappearクラスがついたら出現*/
 body.appear .wrapper{
   animation-name:PageAnimeAppear;
   animation-duration:1s;
@@ -631,6 +633,7 @@ body.appear .wrapper{
       }
     }
     
+    /* スクロールをしたら出現する要素にはじめに透過0を指定　*/
     .fadeUpTrigger{
         opacity: 0;
     }
@@ -706,11 +709,13 @@ body.appear .wrapper{
     word-wrap: break-word;
     width: 38%;
   }
-
   .main_cloud img {
     top: 630px;
   }
 
+  .concept_cloud img {
+    top: 600px;
+  }
   .concept_text {
     margin-right: 40px;
     width: 40%;
@@ -844,7 +849,7 @@ body.appear .wrapper{
 
   .main_cloud img {
     width: 100%;
-    top: 630px;
+    top: 660px;
   }
 
   .main_copy {
@@ -960,6 +965,29 @@ body.appear .wrapper{
 
 
 
+@media screen and (max-width: 680px) {
+
+
+  .main_copy {
+    width: 43%;
+    right: 40%;
+    top: 14%;
+  }
+  .main_cloud img {
+    top: 695px;
+  }
+  .concept_cloud img {
+    top: 410px;
+  }
+  .topics_cloud img {
+    top: 2850px;
+  }
+  .topics_news {
+    width: 400px;
+    padding-left: 1rem;
+  }
+}
+
 
 
   @media screen and (max-width: 414px) {
@@ -980,7 +1008,6 @@ body.appear .wrapper{
   .openbtn span {
     left: 20px;
   }
-
 
   .concept_heading, .lineup_heading, .topics_heading, .contact_heading {
     font-size: 1.5em;
@@ -1032,6 +1059,7 @@ body.appear .wrapper{
   .topics_news {
     width: 95%;
     padding-left: 1rem;
+    line-height: 2rem;
   }
 
   .topics_news > dd {
@@ -1063,7 +1091,4 @@ body.appear .wrapper{
   .tel_list {
     margin-bottom: 20px;
   }
-
-
-
 }/*スマートフォン*/
