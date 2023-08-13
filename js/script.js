@@ -1,4 +1,4 @@
-/*ハンバーガーメニュー*/
+//ハンバーガーメニュー
 $(".openbtn").click(function(){
     $(this).toggleClass('active');
     $(".gnav-sp").toggleClass('panelactive');
@@ -14,23 +14,20 @@ $(".gnav-sp a").click(function(){
 
 
 
-/*loadingアニメーション*/
+//loadingアニメーション
 $(window).on('load',function(){
+
   $("#splash").delay(150).fadeOut('slow',function(){
-      $('body').addClass('appear');
+    $('body').addClass('appear'); 
   });
- 
-  $('.splashbg').on('animationend', function() {    
-      
-  });
-      
 });
 
 
 
 
 
-/*fadeupアニメーション*/
+
+// fadeUp
 function fadeAnime(){
 
   $('.fadeUpTrigger').each(function(){ 
@@ -53,8 +50,29 @@ function fadeAnime(){
 
 
 
+// メインコピーフェードイン
+const animationParams = {
+  targets: '#calve',
+  translateX: 
+    { value: 0, duration: 2500, easing: 'easeInOutQuad'},
+  
+  translateY: [
+    { value: 50, duration: 600, easing: 'easeInOutQuad' },
+    { value: 10, duration: 600, easing: 'easeInOutQuad' },
+    { value: 30, duration: 600, easing: 'easeInOutQuad' },
+    { value: 0, duration: 600, easing: 'easeOutQuad' }
+  ],
+  begin: (anim) => {
+    // アニメーションが始まるときに透明度を徐々に上げる
+    anim.animatables[0].target.style.opacity = 0;
+    anime({
+      targets: anim.animatables[0].target,
+      opacity: 1,
+      duration: 2200,
+      easing: 'linear'
+    });
+  }
+};
 
-
-
-
-
+// アニメーションを実行
+anime(animationParams);
