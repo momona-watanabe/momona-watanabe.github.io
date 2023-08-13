@@ -11,129 +11,136 @@
 </head>
 <body>
 
-  <!---画面遷移用-->
+  <!--画面遷移用-->
   <div id="splash"></div>
-  <div class="splashbg"></div>
+  <div class="splashbg">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" preserveAspectRatio="none" id="svg-bg">
+      <path d="M0,0 v20 q10,10 20,0 t20,0 t20,0 t20,0 t20,0 v-20 Z" fill="#D5E7F5"></path>
+    </svg>
+  </div>
+
+  <div class="main_copy_wrap" >
+    <h1 class="main_copy" id="calve" style="transform: translateX(400px);">
+      <span class="main_copy_letter" style="opacity: 1; transform: translateX(-32px) translateY(80px);"><img src="/images/main_copy1.png" alt="空"></span>
+      <span class="main_copy_letter" style="opacity: 1; transform: translateX(12px) translateY(100px);"><img src="/images/main_copy2.png" alt="気"></span>
+      <span class="main_copy_letter" style="opacity: 1; transform: translateX(48px) translateY(70px);"><img src="/images/main_copy3.png" alt="と"></span>
+      <span class="main_copy_letter" style="opacity: 1; transform: translateX(88px) translateY(45px)"><img src="/images/main_copy4.png" alt="暮"></span>
+      <span class="main_copy_letter" style="opacity: 1; transform: translateX(128px) translateY(60px);"><img src="/images/main_copy5.png" alt="ら"></span>
+      <span class="main_copy_letter" style="opacity: 1; transform: translateX(158px) translateY(15px);"><img src="/images/main_copy6.png" alt="す"></span>
+      <span class="main_copy_letter" style="opacity: 1; transform: translateX(168px) translateY(20px);"><img src="/images/main_copy7.png" alt="。"></span>
+    </h1>
+  </div>
+
+
+  <!--header-->
+  <header id="header" class="header_wrapper">
+    <div class="header_logo">
+      <a href="#">
+        <img src="/images/logo.png" alt="logo">
+      </a>
+    </div>
+    <div class="openbtn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div><!-- openbtn -->
+
+    <nav id="globalnav" class="global_navi gnav-sp">
+      <ul class="gnav_mainmenu">
+        <li data-page="concept">
+          <a href="#">
+            <span class="letters wave">
+              <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">C</span>
+              <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">o</span>
+              <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">n</span>
+              <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">c</span>
+              <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">e</span>
+              <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">p</span>
+              <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">t</span>
+            </span>
+          </a>
+        </li><!--concept-->
+        <li data-page="lineup">
+          <a href="#">
+            <span class="letters wave">
+              <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">L</span>
+              <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">i</span>
+              <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">n</span>
+              <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">e</span>
+              <span class="letter"></span>
+              <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">U</span>
+              <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">p</span>
+            </span>
+          </a>
+        </li><!--lineup-->
+        <li data-page="works">
+          <a href="#">
+            <span class="letters wave">
+              <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">W</span>
+              <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">o</span>
+              <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">r</span>
+              <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">k</span>
+              <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">s</span>
+            </span>
+          </a>
+        </li><!--works-->
+        <li data-page="company">
+          <a href="#">
+            <span class="letters wave">
+              <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">C</span>
+              <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">o</span>
+              <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">m</span>
+              <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">p</span>
+              <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">a</span>
+              <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">n</span>
+              <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">y</span>
+            </span>
+          </a>
+        </li><!--company-->
+        <li data-page="topics">
+          <a href="#">
+            <span class="letters wave">
+              <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">T</span>
+              <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">o</span>
+              <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">p</span>
+              <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">i</span>
+              <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">c</span>
+              <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">s</span>
+            </span>
+          </a>
+        </li><!--topics-->
+        <li data-page="contact">
+          <a href="#">
+            <span class="letters wave">
+              <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">C</span>
+              <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">o</span>
+              <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">n</span>
+              <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">t</span>
+              <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">a</span>
+              <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">c</span>
+              <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">t</span>
+            </span>
+          </a>
+        </li><!--contact-->
+        <nav class="gnav-submenu">
+          <li class="facebook_icon">
+            <a href="#">
+              <img src="/images/facebook.svg" alt="facebook_icon">
+            </a>
+          </li>
+          <li class="instagram_icon">
+            <a href="#">
+              <img src="/images/instagram.svg" alt="instagram_icon">
+            </a>
+          </li>
+        </nav>
+      </ul><!--gnav_mainmenu-->
+    </nav><!--global_navi-->
+  </header>
+
 
   <div class="wrapper">
-    <!--header-->
-    <header id="header" class="header_wrapper">
-      <div class="header_logo">
-        <a href="#">
-          <img src="/images/logo.png" alt="logo">
-        </a>
-      </div>
-      <div class="openbtn">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div><!-- openbtn -->
-    
-      <nav id="globalnav" class="global_navi gnav-sp">
-        <ul class="gnav_mainmenu">
-          <li data-page="concept">
-            <a href="#">
-              <span class="letters wave">
-                <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">C</span>
-                <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">o</span>
-                <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">n</span>
-                <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">c</span>
-                <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">e</span>
-                <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">p</span>
-                <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">t</span>
-              </span>
-            </a>
-          </li><!--concept-->
-          <li data-page="lineup">
-            <a href="#">
-              <span class="letters wave">
-                <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">L</span>
-                <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">i</span>
-                <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">n</span>
-                <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">e</span>
-                <span class="letter"></span>
-                <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">U</span>
-                <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">p</span>
-              </span>
-            </a>
-          </li><!--lineup-->
-          <li data-page="works">
-            <a href="#">
-              <span class="letters wave">
-                <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">W</span>
-                <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">o</span>
-                <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">r</span>
-                <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">k</span>
-                <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">s</span>
-              </span>
-            </a>
-          </li><!--works-->
-          <li data-page="company">
-            <a href="#">
-              <span class="letters wave">
-                <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">C</span>
-                <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">o</span>
-                <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">m</span>
-                <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">p</span>
-                <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">a</span>
-                <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">n</span>
-                <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">y</span>
-              </span>
-            </a>
-          </li><!--company-->
-          <li data-page="topics">
-            <a href="#">
-              <span class="letters wave">
-                <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">T</span>
-                <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">o</span>
-                <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">p</span>
-                <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">i</span>
-                <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">c</span>
-                <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">s</span>
-              </span>
-            </a>
-          </li><!--topics-->
-          <li data-page="contact">
-            <a href="#">
-              <span class="letters wave">
-                <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">C</span>
-                <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">o</span>
-                <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">n</span>
-                <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">t</span>
-                <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">a</span>
-                <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">c</span>
-                <span class="letter" style="opacity: 1; transform: translateY(0em) translateZ(0px);">t</span>
-              </span>
-            </a>
-          </li><!--contact-->
-          <nav class="gnav-submenu">
-            <li class="facebook_icon">
-              <a href="#">
-                <img src="/images/facebook.svg" alt="facebook_icon">
-              </a>
-            </li>
-            <li class="instagram_icon">
-              <a href="#">
-                <img src="/images/instagram.svg" alt="instagram_icon">
-              </a>
-            </li>
-          </nav>
-        </ul><!--gnav_mainmenu-->
-      </nav><!--global_navi-->
-    </header>
-
     <main class="main_wrapper fadeIn">
-      <div class="main_copy_wrap">
-        <h1 class="main_copy copy_fadein">
-          <span class="letter main_copy_letter" style="opacity: 1; transform: translateX(-32px) translateY(80px);"><img src="/images/main_copy1.png" alt="空"></span>
-          <span class="letter main_copy_letter" style="opacity: 1; transform: translateX(12px) translateY(100px);"><img src="/images/main_copy2.png" alt="気"></span>
-          <span class="letter main_copy_letter" style="opacity: 1; transform: translateX(48px) translateY(70px);"><img src="/images/main_copy3.png" alt="と"></span>
-          <span class="letter main_copy_letter" style="opacity: 1; transform: translateX(88px) translateY(45px);"><img src="/images/main_copy4.png" alt="暮"></span>
-          <span class="letter main_copy_letter" style="opacity: 1; transform: translateX(128px) translateY(60px);"><img src="/images/main_copy5.png" alt="ら"></span>
-          <span class="letter main_copy_letter" style="opacity: 1; transform: translateX(158px) translateY(15px);"><img src="/images/main_copy6.png" alt="す"></span>
-          <span class="letter main_copy_letter" style="opacity: 1; transform: translateX(168px) translateY(20px);"><img src="/images/main_copy7.png" alt="。"></span>
-        </h1>
-      </div>
       <div class="main_contents home" style="opacity: 1;">
         <div class="main_text">
           <p class="main_txt_lead">
@@ -158,9 +165,8 @@
         </div>
       </div><!--main_contents home-->
       <div class="main_cloud">
-        <img src="/images/nami-2.png" alt="">
+        <img src="/images/nami-2.png" alt="main_cloud">
       </div>
-    
 
 
       <div class="concept_wrapper fadeUpTrigger">
@@ -213,144 +219,144 @@
         <h2 class="lineup_heading txt_libre">Line up</h2>
         <div class="lineup_contents lineup">
           <ol class="lineup_list">
-            <li class="inviewContents inview">
+            <li>
               <p class="lineup_num">01</p>
               <a href="#" class="hover">
-                <figure class="conts_img inviewContents inview fadeUpTrigger">
+                <figure class="conts_img fadeUpTrigger">
                   <img src="/images/lineup-1mono.jpg" alt="" class="mono">
                   <img src="/images/lineup-1.jpg" alt="" class="color">
                   <figcaption>COMFY HOUSE</figcaption>
                 </figure>
-                <h3 class="lineup_ttl inviewContents inview">COMFYハウス</h3>
-                <p class="lineup_txt inviewContents inview">
+                <h3 class="lineup_ttl">COMFYハウス</h3>
+                <p class="lineup_txt">
                   こだわりをカタチにする
                   <br class="pc_br">
                   心地のいいオーダーメイドハウス
                 </p>
               </a>
             </li>
-            <li class="inviewContents inview">
+            <li>
               <p class="lineup_num">02</p>
               <a href="#" class="hover">
-                <figure class="conts_img inviewContents inview fadeUpTrigger">
+                <figure class="conts_img fadeUpTrigger">
                   <img src="/images/lineup-2mono.jpg" alt="" class="mono">
                   <img src="/images/lineup-2.jpg" alt="" class="color">
                   <figcaption>HIKARI NO IE</figcaption>
                 </figure>
-                <h3 class="lineup_ttl inviewContents inview">ひかりのいえ</h3>
-                <p class="lineup_txt inviewContents inview">
+                <h3 class="lineup_ttl">ひかりのいえ</h3>
+                <p class="lineup_txt">
                   窓からひかりを多く室内に
                   <br class="pc_br">
                   取り込める明るく快適な住宅
                 </p>
               </a>
             </li>
-            <li class="inviewContents inview">
+            <li>
               <p class="lineup_num">03</p>
               <a href="#" class="hover">
-                <figure class="conts_img inviewContents inview fadeUpTrigger">
+                <figure class="conts_img fadeUpTrigger">
                   <img src="/images/lineup-3mono.jpg" alt="" class="mono">
                   <img src="/images/lineup-3.jpg" alt="" class="color">
                   <figcaption> MODAN HOUSE</figcaption>
                 </figure>
-                <h3 class="lineup_ttl inviewContents inview">モダンハウス</h3>
-                <p class="lineup_txt inviewContents inview">
+                <h3 class="lineup_ttl">モダンハウス</h3>
+                <p class="lineup_txt">
                   近代的なデザインが魅力の
                   <br class="pc_br">
                   洗練されたモダンな内装の住宅
                 </p>
               </a>
             </li>
-            <li class="inviewContents inview">
+            <li>
               <p class="lineup_num">04</p>
               <a href="#" class="hover">
-                <figure class="conts_img inviewContents inview fadeUpTrigger">
+                <figure class="conts_img fadeUpTrigger">
                   <img src="/images/lineup-4mono.jpg" alt="" class="mono">
                   <img src="/images/lineup-4.jpg" alt="" class="color">
                   <figcaption>HOSIZORA NO IE</figcaption>
                 </figure>
-                <h3 class="lineup_ttl inviewContents inview">ほしぞらのいえ</h3>
-                <p class="lineup_txt inviewContents inview">
+                <h3 class="lineup_ttl">ほしぞらのいえ</h3>
+                <p class="lineup_txt">
                   長野県阿智村が立地の
                   <br class="pc_br">
                   満点の星空が望める住宅
                 </p>
               </a>
             </li>
-            <li class="inviewContents inview">
+            <li>
               <p class="lineup_num">05</p>
               <a href="#" class="hover">
-                <figure class="conts_img inviewContents inview fadeUpTrigger">
+                <figure class="conts_img fadeUpTrigger">
                   <img src="/images/lineup-5mono.jpg" alt="" class="mono">
                   <img src="/images/lineup-5.jpg" alt="" class="color">
                   <figcaption>COTTAGE</figcaption>
                 </figure>
-                <h3 class="lineup_ttl inviewContents inview">コテージ</h3>
-                <p class="lineup_txt inviewContents inview">
+                <h3 class="lineup_ttl">コテージ</h3>
+                <p class="lineup_txt">
                   別荘・賃貸とさまざまな使い方とデザイン
                   <br class="pc_br">
                   木の温もりとアウトドア体験が魅力な住宅
                 </p>
               </a>
             </li>
-            <li class="inviewContents inview">
+            <li>
               <p class="lineup_num">06</p>
               <a href="#" class="hover">
-                <figure class="conts_img inviewContents inview fadeUpTrigger">
+                <figure class="conts_img fadeUpTrigger">
                   <img src="/images/lineup-6mono.jpg" alt="" class="mono">
                   <img src="/images/lineup-6.jpg" alt="" class="color">
                   <figcaption>KUUKI NO IE</figcaption>
                 </figure>
-                <h3 class="lineup_ttl inviewContents inview">くうきのいえ</h3>
-                <p class="lineup_txt inviewContents inview">
+                <h3 class="lineup_ttl">くうきのいえ</h3>
+                <p class="lineup_txt">
                   風通しの良さを大切にした
                   <br class="pc_br">
                   心地よい暮らしが魅力の住宅
                 </p>
               </a>
             </li>
-            <li class="inviewContents inview">
+            <li>
               <p class="lineup_num">07</p>
               <a href="#" class="hover">
-                <figure class="conts_img inviewContents inview fadeUpTrigger">
+                <figure class="conts_img fadeUpTrigger">
                   <img src="/images/lineup-7mono.jpg" alt="" class="mono">
                   <img src="/images/lineup-7.jpg" alt="" class="color">
                   <figcaption>RENOVATION</figcaption>
                 </figure>
-                <h3 class="lineup_ttl inviewContents inview">リノベーション</h3>
-                <p class="lineup_txt inviewContents inview">
+                <h3 class="lineup_ttl">リノベーション</h3>
+                <p class="lineup_txt">
                   これまでの建物の価値を生かしながら
                   <br class="pc_br">
                   機能性・デザインを重視した住宅
                 </p>
               </a>
             </li>
-            <li class="inviewContents inview">
+            <li>
               <p class="lineup_num">08</p>
               <a href="#" class="hover">
-                <figure class="conts_img inviewContents inview fadeUpTrigger">
+                <figure class="conts_img fadeUpTrigger">
                   <img src="/images/lineup-8mono.jpg" alt="" class="mono">
                   <img src="/images/lineup-8.jpg" alt="" class="color">
                   <figcaption>KOMINKA SAISEI</figcaption>
                 </figure>
-                <h3 class="lineup_ttl inviewContents inview">古民家再生</h3>
-                <p class="lineup_txt inviewContents inview">
+                <h3 class="lineup_ttl">古民家再生</h3>
+                <p class="lineup_txt">
                   歴史の重みを感じながら
                   <br class="pc_br">
                   温かく心地のいい家に
                 </p>
               </a>
             </li>
-            <li class="inviewContents inview">
+            <li>
               <p class="lineup_num">09</p>
               <a href="#" class="hover">
-                <figure class="conts_img inviewContents inview fadeUpTrigger">
+                <figure class="conts_img fadeUpTrigger">
                   <img src="/images/lineup-9mono.jpg" alt="" class="mono">
                   <img src="/images/lineup-9.jpg" alt="" class="color">
                   <figcaption>APARTMENT</figcaption>
                 </figure>
-                <h3 class="lineup_ttl inviewContents inview">アパートメント</h3>
-                <p class="lineup_txt inviewContents inview">
+                <h3 class="lineup_ttl">アパートメント</h3>
+                <p class="lineup_txt">
                   寒冷地に合わせた温かく快適に過ごせる
                   <br class="pc_br">
                   高断熱と機能重視のモダン集合住宅
@@ -368,8 +374,8 @@
         </div>
         <div class="topics_contents fadeUpTrigger">
           <div class="lay_column1">
-            <h2 class="topics_heading txt_libre inviewContents inview fadeUpTrigger">Topics</h2>
-            <dl class="topics_news inviewContents inview">
+            <h2 class="topics_heading txt_libre fadeUpTrigger">Topics</h2>
+            <dl class="topics_news">
 
               <dt>2023/07/05</dt>
               <dd>
@@ -392,7 +398,7 @@
               <dd>
                 <a href="#">Works（COMFYハウス）に追加されました。</a>
               </dd>
-              <div class="topics_btn_wrap inviewContents inview">
+              <div class="topics_btn_wrap">
                 <a href="#"><span class="arrow"></span></a>
                 <a href="#" class="topics_btn">一覧を見る</a>
               </div>
@@ -407,7 +413,7 @@
           <img src="/images/nami-1.png" alt="">
         </div>
         <div class="contact_contents fadeUpTrigger">
-          <h2 class="contact_heading txt_libre inviewContents inview">Contact</h2>
+          <h2 class="contact_heading txt_libre">Contact</h2>
           <p class="contact_message">COMFYへのお問い合わせはお気軽にどうぞ</p>
           <dl class="tel_list txt_libre">
             <dt>
@@ -422,16 +428,17 @@
             <a href="#" class="contact_btn">お問い合わせフォーム</a>
           </div>
         </div><!--contact_contents-->
-
       </article><!--contact_wrapper-->
     </main>
+    
     <footer>
       <p class="copyright txt_libre">2023 COMFY.inc demosite</p>
     </footer>
 
-
-
   </div><!--wrapper-->
+  
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
   <script src="js/script.js"></script>
 
