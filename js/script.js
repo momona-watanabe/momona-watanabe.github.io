@@ -178,9 +178,9 @@ const animationCopy7 = {
     { value: 168, duration: 700, easing: 'easeInOutQuad'},
   
   translateY: [
-    { value: 35, duration: 850, easing: 'easeInOutQuad' },
-    { value: 65, duration: 950, easing: 'easeInOutQuad' },
-    { value: 25, duration: 1050, easing: 'easeInOutQuad' }
+    { value: 30, duration: 850, easing: 'easeInOutQuad' },
+    { value: 60, duration: 950, easing: 'easeInOutQuad' },
+    { value: 20, duration: 1050, easing: 'easeInOutQuad' }
   ],
 
 };
