@@ -260,6 +260,7 @@ header {
 
 .lineup_contents {
   padding-top: 200px;
+  padding-bottom: 40px;
 }
 
 .lineup_list {
@@ -319,9 +320,15 @@ figcaption {
 
 
 /*topics*/
+
+.topics_wrapper {
+  position: relative;
+}
+
 .topics_cloud img{
   position: absolute;
   right: 0%;
+  top: 100px;
   width: 60%;
   object-fit: cover;
   z-index: -1;
@@ -386,10 +393,14 @@ figcaption {
 
 
 /*contact*/
+.contact_wrapper {
+  position: relative;
+}
+
 .contact_cloud img{
   position: absolute;
   left: 0%;
-
+  top: 100px;
   width: 60%;
   object-fit: cover;
   z-index: -1;
@@ -524,6 +535,8 @@ date-page .concept{
   text-align:center;
 }
 
+/*========= 画面遷移のためのCSS ===============*/
+
 /*bodyにappearクラスがついたら出現*/
 body.appear .splashbg{
   content: "";
@@ -555,7 +568,7 @@ body.appear .splashbg{
 
 /*画面遷移の後現れるコンテンツ設定*/
 .wrapper{
-  opacity: 0;
+  opacity: 0;/*はじめは透過0に*/
 }
 
 #svg-bg {
@@ -587,6 +600,8 @@ body.appear .wrapper{
 
 
 
+
+
 /*main FadeIn*/
 .fadeIn{
   animation-name:fadeInAnime;
@@ -604,6 +619,8 @@ body.appear .wrapper{
       opacity: 1;
     }
   }
+
+
 
 
 
@@ -634,6 +651,9 @@ body.appear .wrapper{
     
 
 
+
+
+
 /*ホバー画像切り替え*/
 
     .color{
@@ -646,6 +666,7 @@ body.appear .wrapper{
       opacity: 0;
     }
     
+    
     .conts_img:hover .mono{
       visibility:hidden;
       transition: all 1s;
@@ -657,6 +678,13 @@ body.appear .wrapper{
       transition: all 1s;
       opacity: 1;
     }
+
+
+
+
+
+
+
 
 
 
@@ -888,7 +916,7 @@ body.appear .wrapper{
 
   .topics_cloud img {
     width: 100%;
-    top: 2750px;
+    top: 140px;
   }
 
   .tel_list {
@@ -901,6 +929,7 @@ body.appear .wrapper{
 
   .contact_cloud img {
     width: 100%;
+    top: 140px;
   }
 
   .contact_btn_wrap {
@@ -951,9 +980,7 @@ body.appear .wrapper{
   .concept_cloud img {
     top: 410px;
   }
-  .topics_cloud img {
-    top: 2850px;
-  }
+
   .topics_news {
     width: 400px;
     padding-left: 1rem;
@@ -1049,7 +1076,7 @@ body.appear .wrapper{
   }
 
   .topics_cloud img {
-    top: 2350px;
+    top: 100px;
   }
 
   figcaption {
@@ -1065,4 +1092,7 @@ body.appear .wrapper{
     margin-bottom: 20px;
   }
 
+
+
+  
 }/*スマートフォン*/
