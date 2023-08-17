@@ -448,7 +448,7 @@ figcaption {
 footer {
 padding: 3rem 0;
 text-align: center;
-font-size: 0.8em;
+font-size: 0.75em;
 margin-top: 100px;
 }
 
@@ -742,7 +742,7 @@ body.appear .wrapper{
     margin-left: 0em;
   }
   .gnav-submenu img {
-    width: 1.5em;
+    width: 1.4em;
     height: auto;
     padding-top: 1.5em;
     display: inline-block;
@@ -855,7 +855,11 @@ body.appear .wrapper{
   .main_text {
     width: 100%;
     padding: 0 2em;
-    margin-top: -130px;
+    margin-top: -110px;
+  }
+
+  .concept_wrapper {
+    margin-top: 60px;
   }
 
   .concept_contents {
@@ -880,7 +884,7 @@ body.appear .wrapper{
 
   .concept_text {
     width: 100%;
-    padding: 0 2em;
+    padding: 4em 2em 2em;
     margin-left: 0px;
   }
 
@@ -910,13 +914,16 @@ body.appear .wrapper{
     font-size: 1.2em;
   }
 
+  .topics_contents {
+    padding-top: 160px;
+  }
   .topics_btn_wrap {
     left: 80%;
   }
 
   .topics_cloud img {
     width: 100%;
-    top: 140px;
+    top: 220px;
   }
 
   .tel_list {
@@ -929,7 +936,7 @@ body.appear .wrapper{
 
   .contact_cloud img {
     width: 100%;
-    top: 140px;
+    top: 180px;
   }
 
   .contact_btn_wrap {
@@ -937,23 +944,27 @@ body.appear .wrapper{
     margin: 0;
   }
 
-  .contact_message,.contact_heading {
-      width: 100%;
+  .concept_heading {
+    margin-bottom: 2.3em;
+    width: 100%;
   }
 
   .contact_message {
-    margin-bottom: 20px;
+    margin-bottom: 1.4em;
+    width: 100%;
   }
 
   .contact_contents {
     display: flex;
     flex-wrap: wrap;  
     justify-content: center;
+    padding-top: 130px;
     padding-bottom: 0;
   }
 
   footer {
     margin-top: 0;
+    padding: 5.5em 0 4em;
   }
 
   ul {
@@ -968,9 +979,7 @@ body.appear .wrapper{
 
 @media screen and (max-width: 680px) {
 
-  p {
-    font-size: 0.9em;
-  }
+
   .main_copy {
     width: 43%;
     right: 40%;
@@ -988,15 +997,33 @@ body.appear .wrapper{
     top: 410px;
   }
 
+  .topics_contents,.contact_contents {
+    padding-top: 100px;
+  }
+
   .topics_news {
     width: 400px;
     padding-left: 1rem;
   }
+
+  .topics_cloud img {
+    top: 150px;
+  }
+
+  .contact_cloud img {
+    top: 150px;
+  }
+
+
 }
 
 
 
   @media screen and (max-width: 414px) {
+
+  p {
+    font-size: 0.9em;
+  }
 
   .header_logo img {
     width: 6em;
@@ -1112,5 +1139,6 @@ body.appear .wrapper{
 
   
 }/*スマートフォン*/
+
 
 
