@@ -854,13 +854,13 @@ body.appear .wrapper{
 
   .main_text {
     width: 100%;
-    padding: 0 3em;
+    padding: 0 2em;
     margin-top: -130px;
   }
 
   .concept_contents {
     flex-direction: column;
-    padding-bottom: 70px;
+    padding-bottom: 50px;
   }
 
   .concept_img img {
@@ -880,7 +880,7 @@ body.appear .wrapper{
 
   .concept_text {
     width: 100%;
-    padding: 0 3em;
+    padding: 0 2em;
     margin-left: 0px;
   }
 
@@ -968,7 +968,9 @@ body.appear .wrapper{
 
 @media screen and (max-width: 680px) {
 
-
+  p {
+    font-size: 0.9em;
+  }
   .main_copy {
     width: 43%;
     right: 40%;
@@ -977,6 +979,11 @@ body.appear .wrapper{
   .main_cloud img {
     top: 695px;
   }
+
+  .main_txt_lead {
+    font-size: 17px;
+  }
+
   .concept_cloud img {
     top: 410px;
   }
@@ -999,6 +1006,10 @@ body.appear .wrapper{
   }
   .gnav-submenu {
     margin-left: 0; 
+    
+  }
+  .gnav-submenu img {
+    width: 1em;
   }
 
   .openbtn {
@@ -1052,8 +1063,13 @@ body.appear .wrapper{
     width: 100%;
   }
 
+  .lineup_contents {
+    padding-bottom: 30px;
+  }
+
   .topics_contents {
-    padding-bottom: 220px;
+    padding-top: 0px;
+    padding-bottom: 30px;
   }
 
   .topics_news {
@@ -1076,7 +1092,7 @@ body.appear .wrapper{
   }
 
   .topics_cloud img {
-    top: 100px;
+    top: 40px;
   }
 
   figcaption {
@@ -1096,3 +1112,5 @@ body.appear .wrapper{
 
   
 }/*スマートフォン*/
+
+
