@@ -92,3 +92,18 @@ const animations = [
 ];
 
 animations.forEach(animation => anime(animation));
+
+
+
+
+
+//contact_btn 表示非表示
+
+$('.contact_btn_wrap').hover (
+  function(){
+    $(this).find('.contact_arrow').addClass('text-active')
+  },
+  function(){
+    $(this).find('.contact_arrow').removeClass('text-active');
+  }
+);
