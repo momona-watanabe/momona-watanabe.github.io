@@ -81,10 +81,6 @@ header {
   display: inline-block;
   transition: all .3s;
 }
-.contact_btn{
-  display: inline-block;
-  transition: all .3s;
-}
 
 .concept_btn:hover {
   transform: translateX(0.5rem);
@@ -112,15 +108,23 @@ header {
   transition: all .3s;
 }
 .contact_arrow {
+  display: none;
   color: #FFF;
   content: '';
-  display: inline-block;
   border-top: 1px solid;
   border-right: 1px solid;
   width: 0.4em;
   height: 0.4em;
   transform: translateY(-2px) rotate(45deg);
   margin-right: 0.5em;
+}
+
+.text-active {
+  display: block;
+  margin-top: 14px;
+  margin-right: 0.5em;
+}
+.contact_btn {
   transition: all .3s;
 }
 
@@ -1048,7 +1052,7 @@ body.appear .wrapper{
 
 
   .concept_heading, .lineup_heading, .topics_heading, .contact_heading {
-    font-size: 1.5em;
+    font-size: 1.4em;
   }
 
   .main_copy {
@@ -1072,6 +1076,10 @@ body.appear .wrapper{
     padding: 1.5em;
   }
 
+  .main_text {
+    padding-bottom: 50px;
+  }
+
   .main_cloud img {
     top: 300px;
   }
@@ -1090,6 +1098,14 @@ body.appear .wrapper{
     width: 100%;
   }
 
+  .textL {
+    font-size: 1.2em;
+  }
+
+  .concept_btn {
+    font-size: 0.9em;
+  }
+
   .lineup_contents {
     padding-bottom: 30px;
   }
@@ -1101,6 +1117,7 @@ body.appear .wrapper{
 
   .topics_news {
     width: 95%;
+    font-size: 0.9em;
     padding-left: 1rem;
     line-height: 2rem;
   }
@@ -1129,6 +1146,9 @@ body.appear .wrapper{
 
   .contact_contents {
     padding-bottom: 60px;
+  }
+  .contact_arrow {
+    display: none;
   }
 
   .tel_list {
