@@ -1112,7 +1112,11 @@ body.appear .wrapper{
   }
 
   .lineup_contents {
-    padding-bottom: 30px;
+    margin-bottom: 70px;
+  }
+  
+  .lineup_txt {
+    margin-bottom: 0;
   }
 
   .topics_contents {
