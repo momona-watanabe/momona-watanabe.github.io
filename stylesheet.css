@@ -75,6 +75,7 @@ header {
   margin-right: 1em;
 }
 
+
 /*ボタン*/
 .concept_btn ,.topics_btn{
   color: #000639;
@@ -86,16 +87,13 @@ header {
   transform: translateX(0.5rem);
   transition: all .3s;
 }
+
 .topics_btn:hover {
   transform: translateX(0.5rem);
   transition: all .3s;
 }
-.contact_btn:hover {
-  transform: translateX(0.5rem);
-  transition: all .3s;
-}
 
-.arrow {
+.topics_btn_wrap::before {
   color: #000639;
   content: '';
   display: inline-block;
@@ -107,8 +105,38 @@ header {
   margin-right: 0.5em;
   transition: all .3s;
 }
-.contact_arrow {
-  display: none;
+
+.concept_btn_wrap::before {
+  color: #000639;
+  content: '';
+  display: inline-block;
+  border-top: 1px solid;
+  border-right: 1px solid;
+  width: 0.4em;
+  height: 0.4em;
+  transform: translateY(-2px) rotate(45deg);
+  margin-right: 0.5em;
+  transition: all .3s;
+}
+
+
+/*Contact_btn*/
+a.contact_btn,.contact_btn {
+  color: #FFF;
+  background: #000637;
+  padding: 0.8em 3em;
+  font-size: 0.94em;
+  display: inline-block;
+  border-radius: 2rem;
+  transition: all .3s;
+  position: relative;
+  text-align: center;
+  border: none;
+}
+
+.contact_btn::before {
+  content: '';
+  display: inline-block;
   color: #FFF;
   content: '';
   border-top: 1px solid;
@@ -117,16 +145,30 @@ header {
   height: 0.4em;
   transform: translateY(-2px) rotate(45deg);
   margin-right: 0.5em;
-}
-
-.text-active {
-  display: block;
-  margin-top: 14px;
-  margin-right: 0.5em;
-}
-.contact_btn {
+  position: absolute;
+  left: 2rem;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  opacity: 0;
   transition: all .3s;
 }
+
+.contact_btn:hover {
+  padding: .8em 2.5em .8em 3.5em;
+}
+
+.contact_btn:hover::before{
+  opacity: 1;
+}
+
+.contact_btn_wrap {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+
 
 
 /*main*/
@@ -182,6 +224,7 @@ header {
   top: 20%;
   right: 45.5%;
 }
+
 
 
 /*concept*/
@@ -323,8 +366,8 @@ figcaption {
 }
 
 
-/*topics*/
 
+/*topics*/
 .topics_wrapper {
   position: relative;
 }
@@ -431,22 +474,9 @@ figcaption {
   color: #000637;
 }
 
-.contact_btn  {
-  color: #FFF;
-  justify-content: center;
-  display: flex;
-}
 
-.contact_btn_wrap {
-    background: #000637;
-    display: flex;
-    padding: 0.7em 1em 0.7em 0.4em;
-    font-size: 0.94em;
-    justify-content: center;
-    width: 250px;
-    margin: 0 auto;
-    border-radius: 2rem;
-}
+
+
 
 /*footer*/
 footer {
@@ -723,7 +753,6 @@ body.appear .wrapper{
 @media screen and (max-width: 900px) {
 
   /*header*/
-
   header {
     padding: 1.4em 4%;
   }
@@ -937,8 +966,7 @@ body.appear .wrapper{
 
   .tel_list {
     font-size: 1.3em;
-    padding: 0.8em;
-    width: 250px;
+    padding: 0.8em 1.1em;
     border: 1px solid #000639;
     border-radius: 2em;
   }
@@ -949,8 +977,11 @@ body.appear .wrapper{
   }
 
   .contact_btn_wrap {
-    padding: 1em 2em;
-    margin: 0;
+    display: flex;
+  }
+
+  a.contact_btn, .contact_btn {
+    padding: 1em 3em;
   }
 
   .concept_heading {
@@ -980,6 +1011,7 @@ body.appear .wrapper{
     margin-block-start: 0px;
     padding-inline-start: 0px;
   }
+
 }/*タブレット*/
 
 
@@ -987,7 +1019,6 @@ body.appear .wrapper{
 
 
 @media screen and (max-width: 680px) {
-
 
   .main_copy {
     width: 43%;
@@ -1019,10 +1050,17 @@ body.appear .wrapper{
     top: 150px;
   }
 
+  .contact_message {
+    margin-bottom: 0.4em;
+  }
+  
   .contact_cloud img {
     top: 150px;
   }
 
+  .tel_list {
+    margin: 1em 0;
+  }
 
 }
 
@@ -1112,9 +1150,9 @@ body.appear .wrapper{
   }
 
   .lineup_contents {
-    margin-bottom: 80px;
+    margin-bottom: 70px;
   }
-  
+
   .lineup_txt {
     margin-bottom: 0;
   }
@@ -1156,17 +1194,7 @@ body.appear .wrapper{
   .contact_contents {
     padding-bottom: 60px;
   }
-  .contact_arrow {
-    display: none;
-  }
 
-  .tel_list {
-    margin-bottom: 20px;
-  }
-
-
-
-  
 }/*スマートフォン*/
 
 
